@@ -1,0 +1,39 @@
+@import '../../styles/settings.scss';
+
+@keyframes makeVisible {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background-overlay;
+  opacity: 0;
+  // animate
+  animation-name: makeVisible;
+  animation-duration: .4s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.content {
+  background: $color-light;
+  padding: 16px 12px;
+  border-radius: 8px;
+  box-shadow: $shadow;
+}
