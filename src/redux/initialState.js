@@ -7,6 +7,7 @@ const initialState = {
       description: 'Zawiera opłatę za seans w dowolnym kinie bez kupowania jedzenia w sklepie kinowym.',
       price: '140',
       img: `${process.env.PUBLIC_URL}/images/rewards/cinema.jpg`,
+      imgAlt: 'Sala kinowa',
     },
     {
       id: '2',
@@ -14,6 +15,7 @@ const initialState = {
       description: '',
       price: '160',
       img: `${process.env.PUBLIC_URL}/images/rewards/gift.jpg`,
+      imgAlt: 'Mały prezent',
     },
     {
       id: '3',
@@ -21,6 +23,7 @@ const initialState = {
       description: 'Zawiera opłatę za seans w dowolnym kinie wraz z kupieniem dowolnej ilości jedzenia w sklepie kinowym.',
       price: '300',
       img: `${process.env.PUBLIC_URL}/images/rewards/cinema-food.jpg`,
+      imgAlt: 'Jedzenie w kinie',
     },
   ],
 

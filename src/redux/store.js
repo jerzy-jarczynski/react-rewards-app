@@ -1,6 +1,9 @@
 import { legacy_createStore as createStore } from 'redux';
 import initialState from './initialState';
 
+// selectors
+export const getAllRewards = state => state.rewards;
+
 const reducer = (state, action) => {
   return state;
 };

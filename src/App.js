@@ -1,8 +1,15 @@
+import Container from './components/Container/Container';
+import Rewards from './components/Rewards/Rewards';
+
 const App = () => {
   return (
-    <h1>
-      React Rewards App
-    </h1>
+    <main>
+      {/* Navbar */}
+      <Container>
+        <Rewards />
+      </Container>
+      {/* Action bar */}
+    </main>
   );
 }
 
