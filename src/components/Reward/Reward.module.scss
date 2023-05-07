@@ -47,21 +47,6 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: $color-dark;
-  color: $color-light;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 7px 12px;
-  border-radius: 13px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.rewardIcon {
-  width: 13px;
-  margin-right: 6px;
 }
 
 @media (min-width: 500px) {
@@ -92,14 +77,5 @@
   .price {
     top: 26px;
     right: 26px;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-size: (12px * 1.33);
-    line-height: (15px * 1.33);
-  }
-
-  .rewardIcon {
-    width: 18px;
-    margin-right: 12px;
   }
 }

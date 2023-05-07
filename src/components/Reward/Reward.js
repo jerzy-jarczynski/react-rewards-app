@@ -1,4 +1,5 @@
 import styles from './Reward.module.scss';
+import PointsButton from '../PointsButton/PointsButton';
 
 const Reward = props => {
 
@@ -14,10 +15,7 @@ const Reward = props => {
         { props.description }
       </p>
       <div className={ styles.price }>
-        <img src={ `${process.env.PUBLIC_URL}/images/icons/reward.png` } alt="Ikona prezent" className={ styles.rewardIcon } />
-        <span className={ styles.amount }>
-          { props.price }
-        </span>
+        <PointsButton location={ 'Reward' } amount={ props.price } />
       </div>
     </li>
   );

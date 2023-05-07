@@ -1,10 +1,11 @@
+import NavBar from './components/NavBar/NavBar';
 import Container from './components/Container/Container';
 import Rewards from './components/Rewards/Rewards';
 
 const App = () => {
   return (
     <main>
-      {/* Navbar */}
+      <NavBar />
       <Container>
         <Rewards />
       </Container>
