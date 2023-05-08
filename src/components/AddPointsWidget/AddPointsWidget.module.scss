@@ -1,0 +1,35 @@
+@import '../../styles/settings.scss';
+
+.AddPointsWidget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  >* {
+    width: 335px;
+  }
+
+  >button:last-of-type {
+    margin-top: 8px;
+  }
+
+  label {
+    font-family: $font-main;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: $color-dark;
+  }
+}
+
+.buttonRow {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+label:last-of-type {
+  margin: 24px 0 8px;
+}
