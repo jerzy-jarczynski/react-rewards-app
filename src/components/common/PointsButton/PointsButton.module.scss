@@ -1,0 +1,55 @@
+@use "sass:math";
+@import '../../../styles/settings.scss';
+
+.button {
+  border: unset;
+  background: $color-dark;
+  color: $color-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-family: $font-main;
+  cursor: pointer;
+
+  &.Reward {
+    padding: 7px 12px;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 13px;
+
+    .icon {
+      width: 13px;
+      margin-right: 6px;
+    }
+  }
+
+  &.NavBar {
+    padding: 12px 22px;
+    border-radius: 26px;
+    font-size: 24px;
+    line-height: 29px;
+
+    .icon {
+      width: 26px;
+      margin-right: 12px;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .button {
+
+    &.Reward {
+      padding: 12px 20px;
+      font-size: (12px * 1.33);
+      line-height: (15px * 1.33);
+      border-radius: 20px;
+
+      .icon {
+        width: 18px;
+        margin-right: 12px;
+      }
+    }
+  }
+}

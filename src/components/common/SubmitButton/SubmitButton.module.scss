@@ -1,0 +1,31 @@
+@import '../../../styles/settings.scss';
+
+.SubmitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 39px;
+  color: $color-dark;
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  background: $button-bg-default;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: $transition-main;
+
+  &:hover {
+    background: $button-bg-hover;
+  }
+
+  &:focus {
+    background: $button-bg-focus;
+  }
+
+  &.disabled {
+    background: $button-bg-disabled;
+    color: $color-placeholder;
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../../styles/settings.scss';
+
+@keyframes makeVisible {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rideTop {
+  0% {
+    opacity: 0;
+    top: 155px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 105px;
+  }
+}
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: $background-overlay;
+  opacity: 0;
+  // animate
+  animation-name: makeVisible;
+  animation-duration: .2s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.content {
+  background: $color-light;
+  padding: 16px 12px;
+  border-radius: 8px;
+  box-shadow: $shadow;
+  position: absolute;
+  top: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  // animate
+  animation-name: rideTop;
+  animation-duration: .2s;
+  animation-delay: .2s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
