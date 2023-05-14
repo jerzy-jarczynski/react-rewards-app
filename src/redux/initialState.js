@@ -1,5 +1,7 @@
 const initialState = {
 
+  points: 3100,
+
   rewards: [
     {
       id: '1',

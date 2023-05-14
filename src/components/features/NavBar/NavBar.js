@@ -3,6 +3,8 @@ import PointsButton from '../../common/PointsButton/PointsButton';
 import PopUp from '../../features/PopUp/PopUp';
 import AddPointsWidget from '../AddPointsWidget/AddPointsWidget';
 import { useState } from 'react';
+import { getAllPoints } from '../../../redux/pointsRedux';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
 
@@ -10,6 +12,8 @@ const NavBar = () => {
 
   const openPopUp = () => setOpen(true);
   const closePopUp = () => setOpen(false);
+
+  const points = useSelector(getAllPoints);
 
   const showPopUp = o => {
     if (o) {
@@ -24,7 +28,7 @@ const NavBar = () => {
   return (
     <nav className={ styles.NavBar }>
       <h2 className={ styles.info }>Zebrane obecnie punkty</h2>
-      <PointsButton location={ 'NavBar' } amount={ 'XX' } clickFunction={ openPopUp } />
+      <PointsButton location={ 'NavBar' } amount={ points } clickFunction={ openPopUp } />
       { open ? showPopUp(open) : null }
     </nav>
   );

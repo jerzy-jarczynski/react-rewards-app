@@ -1,12 +1,14 @@
-import { legacy_createStore as createStore } from 'redux';
+import { legacy_createStore as createStore, combineReducers } from 'redux';
 import initialState from './initialState';
+import rewardsReducer from './rewardsRedux';
+import pointsReducer from './pointsRedux';
 
-// selectors
-export const getAllRewards = state => state.rewards;
-
-const reducer = (state, action) => {
-  return state;
+const subreducers = {
+  rewards: rewardsReducer,
+  points: pointsReducer,
 };
+
+const reducer = combineReducers(subreducers);
 
 const store = createStore(
   reducer,
