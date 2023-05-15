@@ -9,8 +9,10 @@ const PopUp = props => {
     }
   };
 
+  // onClick={ testClick }
+
   return (
-    <div className={ styles.popUp } onClick={ testClick } >
+    <div className={ styles.popUp } >
       <div className={ styles.content }>
         { props.children }
       </div>

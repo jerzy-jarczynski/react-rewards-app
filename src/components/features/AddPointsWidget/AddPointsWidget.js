@@ -10,7 +10,9 @@ import { useDispatch } from 'react-redux';
 const AddPointsWidget = () => {
 
   const currentPoints = useSelector(getAllPoints);
+
   const [newPoints, setNewPoints] = useState(currentPoints);
+
   const dispatch = useDispatch();
 
   const arrayRange = (start, stop, step) =>
@@ -41,7 +43,7 @@ const AddPointsWidget = () => {
           )
         }
       </div>
-      <TextInput type={ 'number' } placeholder={ currentPoints } onChange={ e => setNewPoints(e.target.value) } />
+      <TextInput type={ 'number' } placeholder={ currentPoints } value={newPoints} onChange={ e => setNewPoints(e.target.value) } />
       <label>Podaj hasło do zmiany</label>
       <TextInput type={ 'password' } />
       <SubmitButton>
