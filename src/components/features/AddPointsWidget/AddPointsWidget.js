@@ -5,13 +5,18 @@ import styles from './AddPointsWidget.module.scss';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getAllPoints, updatePoints } from '../../../redux/pointsRedux';
+import { getPassword } from '../../../redux/passwordRedux';
 import { useDispatch } from 'react-redux';
 
 const AddPointsWidget = () => {
 
   const currentPoints = useSelector(getAllPoints);
+  const currentPassword = useSelector(getPassword);
 
-  const [newPoints, setNewPoints] = useState(currentPoints);
+  const [newPoints, setNewPoints] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
+  const [errorPassword, setErrorPassword] = useState(false);
+  const [errorPoints, setErrorPoints] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -24,8 +29,26 @@ const AddPointsWidget = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(updatePoints(newPoints));
+
+    if (newPoints) {
+      if (inputPassword === currentPassword) {
+        dispatch(updatePoints(newPoints));
+        setInputPassword('');
+        setNewPoints('');
+        setErrorPassword(false);
+        setErrorPoints(false);
+      } else {
+        setErrorPassword(true);
+      }
+    } else {
+      setErrorPoints(true);
+    }
   };
+
+  const handleAddButtonClick = (points) => {
+    const newValue = parseInt(currentPoints) + points;
+    setNewPoints(newValue);
+  }
 
   return (
     <form className={ styles.AddPointsWidget } onSubmit={ handleSubmit }>
@@ -35,7 +58,7 @@ const AddPointsWidget = () => {
           addPointsButtons.map(
             (button, index) => {
               return (
-                <AddPointsButton key={ index }>
+                <AddPointsButton key={ index } action={handleAddButtonClick}>
                   { button }
                 </AddPointsButton>
               );
@@ -43,9 +66,11 @@ const AddPointsWidget = () => {
           )
         }
       </div>
-      <TextInput type={ 'number' } placeholder={ currentPoints } value={newPoints} onChange={ e => setNewPoints(e.target.value) } />
+      <TextInput type={ 'number' } placeholder={ currentPoints } value={ newPoints } onChange={ e => setNewPoints(e.target.value) } />
+      { errorPoints && <span className={styles.error}>Nowa ilość punktów nie może być pusta</span> }
       <label>Podaj hasło do zmiany</label>
-      <TextInput type={ 'password' } />
+      <TextInput type={ 'text' } value={ inputPassword } onChange={ e => setInputPassword(e.target.value) } password={true} />
+      { errorPassword && <span className={styles.error}>Wprowadź poprawne hasło</span> }
       <SubmitButton>
         { 'Zmień punkty' }
       </SubmitButton>

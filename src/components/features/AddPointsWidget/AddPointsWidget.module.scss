@@ -33,3 +33,11 @@
 label:last-of-type {
   margin: 24px 0 8px;
 }
+
+.error {
+  display: block;
+  margin-top: 5px;
+  font-family: $font-main;
+  font-size: 14px;
+  color: $color-danger;
+}

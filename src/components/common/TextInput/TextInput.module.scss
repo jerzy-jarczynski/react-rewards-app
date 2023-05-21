@@ -26,3 +26,7 @@
     border: $textfield-border-focus;
   }
 }
+
+.password {
+  -webkit-text-security: disc;
+}

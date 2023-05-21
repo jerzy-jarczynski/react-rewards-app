@@ -12,7 +12,6 @@ export const updatePoints = payload => ({ type: UPDATE_POINTS, payload });
 const pointsReducer = (statePart = [], action) => {
   switch (action.type) {
     case UPDATE_POINTS:
-      console.log('redux', action.payload);
       return action.payload;
     default:
       return statePart;

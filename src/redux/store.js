@@ -2,10 +2,12 @@ import { legacy_createStore as createStore, combineReducers } from 'redux';
 import initialState from './initialState';
 import rewardsReducer from './rewardsRedux';
 import pointsReducer from './pointsRedux';
+import passwordReducer from './passwordRedux';
 
 const subreducers = {
   rewards: rewardsReducer,
   points: pointsReducer,
+  password: passwordReducer,
 };
 
 const reducer = combineReducers(subreducers);

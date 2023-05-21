@@ -2,9 +2,9 @@ import styles from './PopUp.module.scss';
 
 const PopUp = props => {
   
-  const testClick = (event) => {
-    event.preventDefault();
-    if (event.target === event.currentTarget) {
+  const handleClick = e => {
+    e.preventDefault();
+    if (e.target === e.currentTarget) {
       props.clickFunction();
     }
   };
@@ -12,11 +12,13 @@ const PopUp = props => {
   // onClick={ testClick }
 
   return (
-    <div className={ styles.popUp } >
+    <>
+      <div className={ styles.popUp } onClick={handleClick}>
+      </div>
       <div className={ styles.content }>
         { props.children }
       </div>
-    </div>
+    </>
   );
 
 };

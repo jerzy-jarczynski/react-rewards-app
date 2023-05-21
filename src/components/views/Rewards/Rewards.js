@@ -1,7 +1,10 @@
-import Reward from '../../features/Reward/Reward';
+import React, { Suspense } from 'react';
 import styles from './Rewards.module.scss';
 import { useSelector } from 'react-redux';
 import { getAllRewards } from '../../../redux/rewardsRedux';
+import { motion } from "framer-motion";
+
+const Reward = React.lazy(() => import('../../features/Reward/Reward'));
 
 const Rewards = () => {
 
@@ -9,7 +12,19 @@ const Rewards = () => {
 
   return (
     <ul className={ styles.rewards }>
-      { rewards.map(reward => <Reward key={reward.id} {...reward} />) }
+      {
+        rewards.map(reward => (
+          <Suspense key={reward.id} fallback={<div>Ładowanie nagrody...</div>}>
+            <motion.div
+              initial={{ opacity: 0, y: "50px" }}
+              whileInView={{ opacity: 1, y: "0" }}
+              transition={{ duration: 0.4 }}
+            >
+              <Reward {...reward} />
+            </motion.div>
+          </Suspense>
+        )) 
+      }
     </ul>
   );
 };

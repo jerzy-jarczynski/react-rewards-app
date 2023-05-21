@@ -2,6 +2,8 @@ const initialState = {
 
   points: '3100',
 
+  password: '1111',
+
   rewards: [
     {
       id: '1',

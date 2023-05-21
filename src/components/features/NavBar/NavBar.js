@@ -2,7 +2,7 @@ import styles from './NavBar.module.scss';
 import PointsButton from '../../common/PointsButton/PointsButton';
 import PopUp from '../../features/PopUp/PopUp';
 import AddPointsWidget from '../AddPointsWidget/AddPointsWidget';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { getAllPoints } from '../../../redux/pointsRedux';
 import { useSelector } from 'react-redux';
 
