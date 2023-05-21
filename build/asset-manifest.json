@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/react-rewards/static/css/main.d3abe662.css",
-    "main.js": "/react-rewards/static/js/main.9f45adfa.js",
+    "main.css": "/react-rewards/static/css/main.43d1f229.css",
+    "main.js": "/react-rewards/static/js/main.a15dee7d.js",
+    "static/css/857.79874efa.chunk.css": "/react-rewards/static/css/857.79874efa.chunk.css",
+    "static/js/857.f36d7f89.chunk.js": "/react-rewards/static/js/857.f36d7f89.chunk.js",
     "index.html": "/react-rewards/index.html",
-    "main.d3abe662.css.map": "/react-rewards/static/css/main.d3abe662.css.map",
-    "main.9f45adfa.js.map": "/react-rewards/static/js/main.9f45adfa.js.map"
+    "main.43d1f229.css.map": "/react-rewards/static/css/main.43d1f229.css.map",
+    "main.a15dee7d.js.map": "/react-rewards/static/js/main.a15dee7d.js.map",
+    "857.79874efa.chunk.css.map": "/react-rewards/static/css/857.79874efa.chunk.css.map",
+    "857.f36d7f89.chunk.js.map": "/react-rewards/static/js/857.f36d7f89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3abe662.css",
-    "static/js/main.9f45adfa.js"
+    "static/css/main.43d1f229.css",
+    "static/js/main.a15dee7d.js"
   ]
 }
