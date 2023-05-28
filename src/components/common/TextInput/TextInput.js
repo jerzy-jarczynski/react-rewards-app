@@ -3,8 +3,6 @@ import clsx from 'clsx';
 
 const TextInput = props => {
 
-  console.log(props.password);
-
   return (
     <input
       className={clsx(styles.TextInput, props.password && styles.password)}

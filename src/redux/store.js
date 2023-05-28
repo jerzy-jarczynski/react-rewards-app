@@ -3,11 +3,13 @@ import initialState from './initialState';
 import rewardsReducer from './rewardsRedux';
 import pointsReducer from './pointsRedux';
 import passwordReducer from './passwordRedux';
+import navlinksReducer from './navlinksRedux';
 
 const subreducers = {
   rewards: rewardsReducer,
   points: pointsReducer,
   password: passwordReducer,
+  navlinks: navlinksReducer,
 };
 
 const reducer = combineReducers(subreducers);

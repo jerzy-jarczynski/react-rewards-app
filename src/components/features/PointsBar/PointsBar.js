@@ -31,7 +31,13 @@ const NavBar = () => {
       <h2 className={ styles.info }>Zebrane obecnie punkty</h2>
       <PointsButton location={ 'PointsBar' } amount={ points } clickFunction={ openPopUp } />
       { open ? showPopUp(open) : null }
-      { open ? scrollableContent.classList.add(styles.noScroll) : scrollableContent.classList.remove(styles.noScroll) }
+      {
+        open
+        ? scrollableContent.classList.add(styles.noScroll)
+        : (scrollableContent.classList.contains(styles.noScroll)
+          ? scrollableContent.classList.remove(styles.noScroll)
+          : null)
+      }
     </header>
   );
 };

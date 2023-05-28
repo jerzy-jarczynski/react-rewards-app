@@ -4,6 +4,23 @@ const initialState = {
 
   password: '1111',
 
+  navlinks: [
+    {
+      id: '1',
+      name: 'Nagrody',
+      icon: `${process.env.PUBLIC_URL}/images/icons/nav-gift.svg`,
+      iconActive: `${process.env.PUBLIC_URL}/images/icons/nav-gift-active.svg`,
+      linkTo: '/react-rewards',
+    },
+    {
+      id: '2',
+      name: 'Oś czasu',
+      icon: `${process.env.PUBLIC_URL}/images/icons/nav-clock.svg`,
+      iconActive: `${process.env.PUBLIC_URL}/images/icons/nav-clock-active.svg`,
+      linkTo: '/react-rewards/timeline',
+    }
+  ],
+
   rewards: [
     {
       id: '1',

@@ -1,17 +1,22 @@
-import PointsBar from './components/features/PointsBar/PointsBar';
-import Container from './components/common/Container/Container';
-import Rewards from './components/views/Rewards/Rewards';
+// router
+import { Routes, Route } from 'react-router-dom';
+// components
 import NavBar from './components/features/NavBar/NavBar';
+// pages
+import Rewards from './components/pages/Rewards/Rewards';
+import TimeLine from './components/pages/TimeLine/TimeLine';
 
 const App = () => {
   return (
-    <main>
-      <PointsBar />
-      <Container>
-        <Rewards />
-      </Container>
-      <NavBar />
-    </main>
+    <>
+      <Routes>
+        <Route path="/react-rewards" element={<Rewards />} />
+        <Route path="/react-rewards/timeline" element={<TimeLine />} />
+      </Routes>
+      <footer>
+        <NavBar />
+      </footer>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import styles from './Rewards.module.scss';
+import styles from './RewardsList.module.scss';
 import { useSelector } from 'react-redux';
 import { getAllRewards } from '../../../redux/rewardsRedux';
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ const Rewards = () => {
   const rewards = useSelector(getAllRewards);
 
   return (
-    <ul className={ styles.rewards }>
+    <ul className={ styles.RewardsList }>
       {
         rewards.map(reward => (
           <Suspense key={reward.id} fallback={<div>Ładowanie nagrody...</div>}>
