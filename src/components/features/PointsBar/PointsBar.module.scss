@@ -1,5 +1,9 @@
 @import '../../../styles/settings.scss';
 
+.noScroll {
+  overflow: hidden;
+}
+
 .PointsBar {
   color: $color-dark;
   position: fixed;

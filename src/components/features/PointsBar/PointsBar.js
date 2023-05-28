@@ -11,9 +11,10 @@ const NavBar = () => {
   const points = useSelector(getAllPoints);
 
   const [open, setOpen] = useState(false);
+  const [scrollableContent] = useState(document.querySelector('body'));
 
   const openPopUp = () => setOpen(true);
-  const closePopUp = () => setOpen(false); 
+  const closePopUp = () => setOpen(false);
 
   const showPopUp = o => {
     if (o) {
@@ -30,6 +31,7 @@ const NavBar = () => {
       <h2 className={ styles.info }>Zebrane obecnie punkty</h2>
       <PointsButton location={ 'PointsBar' } amount={ points } clickFunction={ openPopUp } />
       { open ? showPopUp(open) : null }
+      { open ? scrollableContent.classList.add(styles.noScroll) : scrollableContent.classList.remove(styles.noScroll) }
     </header>
   );
 };
