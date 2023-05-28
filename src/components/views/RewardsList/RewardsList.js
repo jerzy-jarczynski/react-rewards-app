@@ -15,13 +15,13 @@ const Rewards = () => {
       {
         rewards.map(reward => (
           <Suspense key={reward.id} fallback={<div>Ładowanie nagrody...</div>}>
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: "50px" }}
               whileInView={{ opacity: 1, y: "0" }}
               transition={{ duration: 0.4 }}
-            >
+            > */}
               <Reward {...reward} />
-            </motion.div>
+            {/* </motion.div> */}
           </Suspense>
         )) 
       }
