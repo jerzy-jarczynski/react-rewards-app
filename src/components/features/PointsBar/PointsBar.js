@@ -20,7 +20,7 @@ const NavBar = () => {
     if (o) {
       return (
         <PopUp clickFunction={ closePopUp }>
-          <AddPointsWidget />
+          <AddPointsWidget action={ closePopUp } />
         </PopUp>
       );
     }

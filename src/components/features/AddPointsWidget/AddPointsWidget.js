@@ -8,7 +8,7 @@ import { getAllPoints, updatePoints } from '../../../redux/pointsRedux';
 import { getPassword } from '../../../redux/passwordRedux';
 import { useDispatch } from 'react-redux';
 
-const AddPointsWidget = () => {
+const AddPointsWidget = ({ action }) => {
 
   const currentPoints = useSelector(getAllPoints);
   const currentPassword = useSelector(getPassword);
@@ -37,6 +37,7 @@ const AddPointsWidget = () => {
         setNewPoints('');
         setErrorPassword(false);
         setErrorPoints(false);
+        action();
       } else {
         setErrorPassword(true);
       }

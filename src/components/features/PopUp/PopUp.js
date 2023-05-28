@@ -9,8 +9,6 @@ const PopUp = props => {
     }
   };
 
-  // onClick={ testClick }
-
   return (
     <>
       <div className={ styles.popUp } onClick={handleClick}>
