@@ -1,7 +1,9 @@
+import TimeLineList from '../../views/TimeLineList/TimeLineList';
+
 const TimeLine = () => {
 
   return (
-    <h1>TimeLine</h1>
+    <TimeLineList />
   );
 
 };

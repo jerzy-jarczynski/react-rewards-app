@@ -3,8 +3,6 @@ import clsx from 'clsx';
 
 const NavigationLink = props => {
 
-  console.log(props);
-
   return (
     <div className={clsx( styles.NavigationLink, props.active && styles.active )}>
       <div className={styles.iconContainer}>

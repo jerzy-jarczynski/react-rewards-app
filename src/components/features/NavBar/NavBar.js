@@ -10,8 +10,6 @@ const NavBar = () => {
 
   const activePage = useLocation();
 
-  console.log(activePage);
-
   return (
     <nav className={styles.NavBar}>
       <ul className={styles.navLinks}>
