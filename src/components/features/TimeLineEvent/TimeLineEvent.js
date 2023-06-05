@@ -1,9 +1,13 @@
 import styles from './TimeLineEvent.module.scss';
 import { useSelector } from 'react-redux';
 import { getRewardById } from '../../../redux/rewardsRedux';
-import Reward from '../../features/Reward/Reward';
+import Reward from '../Reward/Reward';
+import clsx from 'clsx';
+import { useState, useEffect } from 'react';
 
 const TimeLineEvent = props => {
+
+  const [iconSrc, setIconSrc] = useState('');
 
   console.log('TimeLineEvent', props);
 
@@ -17,8 +21,17 @@ const TimeLineEvent = props => {
     year: 'numeric',
   });
 
+  useEffect(() => {
+    setIconSrc(
+      `${process.env.PUBLIC_URL}/images/icons/event-${props.type}-icon.svg`
+    );
+  }, [iconSrc, props.type]);
+
   return (
-    <div className={styles.TimeLineEvent}>
+    <div className={clsx(styles.TimeLineEvent, props.lastClass && styles.lastEvent)}>
+      <div className={styles.eventIcon}>
+        <img alt={`icon-${props.type}`} src={iconSrc} />
+      </div>
       <h3>
         { props.title }
       </h3>

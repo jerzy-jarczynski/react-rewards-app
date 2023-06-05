@@ -1,0 +1,80 @@
+@import '../../../styles/settings.scss';
+
+.TimeLineEvent {
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-bottom: 24px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 100%;
+    left: -1px;
+    background-color: $color-gold;
+  }
+}
+
+.lastEvent::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: $color-gold;
+  border-radius: 100%;
+  bottom: 0;
+  left: -3px;
+}
+
+.eventIcon {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 2px solid $color-gold;
+  border-radius: 100%;
+  top: 0;
+  left: -15px;
+  background-color: #fff;
+  z-index: 99;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 500px) {
+  .TimeLineEvent {
+    padding-left: 30px;
+    padding-bottom: 32px;
+
+    &::before {
+      left: -1.33px;
+      width: 2.66px;
+    }
+  }
+
+  .eventIcon {
+    width: 40px;
+    height: 40px;
+    border: 2.66px solid $color-gold;
+    left: -20px;
+
+    img {
+      transform: translate(-50%, -50%) scale(1.33);
+    }
+  }
+
+  .lastEvent::after {
+    width: 8px;
+    height: 8px;
+    left: -4px;
+  }
+}
