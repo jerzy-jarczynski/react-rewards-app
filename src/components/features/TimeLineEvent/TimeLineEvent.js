@@ -5,11 +5,10 @@ import Reward from '../Reward/Reward';
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
 
+
 const TimeLineEvent = props => {
 
   const [iconSrc, setIconSrc] = useState('');
-
-  console.log('TimeLineEvent', props);
 
   const rewardData = useSelector(
     state => getRewardById(state, props.rewardId)
