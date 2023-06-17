@@ -37,6 +37,10 @@
   }
 }
 
+.disabled {
+  cursor: unset;
+}
+
 @media (min-width: 500px) {
   .button {
 

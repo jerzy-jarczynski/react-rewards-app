@@ -1,0 +1,83 @@
+@use "sass:math";
+@import '../../../styles/settings.scss';
+
+.reward {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+}
+
+.imageWrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+}
+
+.title,
+.description,
+.price {
+  font-family: $font-main;
+}
+
+.title {
+  margin: 12px 0 0;
+  color: $color-dark;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.description {
+  margin: 6px 0 0;
+  color: $color-medium;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media (min-width: 500px) {
+  .reward {
+    padding: 16px;
+  }
+
+  .imageWrapper {
+    border-radius: 12px;
+  }
+
+  .image {
+    max-height: 215px;
+  }
+
+  .title {
+    margin: 16px 0 0;
+    font-size: (16px * 1.33);
+    line-height: (19px * 1.33);
+  }
+
+  .description {
+    margin: 8px 0 0;
+    font-size: (12px * 1.33);
+    line-height: (15px * 1.33);
+  }
+
+  .price {
+    top: 26px;
+    right: 26px;
+  }
+}

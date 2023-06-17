@@ -1,7 +1,7 @@
 import styles from './TimeLineEvent.module.scss';
 import { useSelector } from 'react-redux';
 import { getRewardById } from '../../../redux/rewardsRedux';
-import Reward from '../Reward/Reward';
+import TimeLineReward from '../TimeLineReward/TimeLineReward';
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
 
@@ -31,20 +31,22 @@ const TimeLineEvent = props => {
       <div className={styles.eventIcon}>
         <img alt={`icon-${props.type}`} src={iconSrc} />
       </div>
-      <h3>
+      <h3 className={styles.title}>
         { props.title }
       </h3>
-      <span>
+      <span className={styles.data}>
         { formatter.format( props.date ) }
       </span>
-      <span>
+      <span className={styles.data}>
         { `Zebrane punkty: ${ props.gatheredPoints }` }
       </span>
-      {
-        rewardData
-        ? <Reward {...rewardData} />
-        : null 
-      }
+      <span className={styles.reward}>
+        {
+          rewardData
+          ? <TimeLineReward {...rewardData} />
+          : null 
+        }
+      </span>
     </div>
   );
 
