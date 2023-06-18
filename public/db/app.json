@@ -2,7 +2,7 @@
   "points": [
     {
       "id": "1",
-      "value": "1259"
+      "value": "12345"
     }
   ],
   "password": [
@@ -33,7 +33,7 @@
       "title": "Wyjście do kina (bez jedzenia na miejscu)",
       "description": "Zawiera opłatę za seans w dowolnym kinie bez kupowania jedzenia w sklepie kinowym.",
       "price": "140",
-      "img": "/images/rewards/cinema.pnga",
+      "img": "/images/rewards/cinema.png",
       "imgAlt": "Sala kinowa"
     },
     {

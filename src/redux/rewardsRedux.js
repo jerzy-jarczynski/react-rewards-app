@@ -5,7 +5,7 @@ export const getAllRewards = state => state.rewards;
 export const getRewardById = ({rewards}, rewardId) => rewards.find(reward => reward.id === rewardId);
 
 // actions
-const createActionName = actionName => `app/tables/${actionName}`;
+const createActionName = actionName => `app/rewards/${actionName}`;
 const UPDATE_REWARDS = createActionName('UPDATE_REWARDS');
 
 // action creators

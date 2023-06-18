@@ -2,7 +2,7 @@ const initialState = {
 
   points: '',
 
-  password: '1111',
+  password: '',
 
   navlinks: [
     {
