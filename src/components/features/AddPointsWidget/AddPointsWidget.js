@@ -1,10 +1,13 @@
+// styles
 import AddPointsButton from '../../common/AddPointsButton/AddPointsButton';
 import SubmitButton from '../../common/SubmitButton/SubmitButton';
 import TextInput from '../../common/TextInput/TextInput';
 import styles from './AddPointsWidget.module.scss';
-import { useEffect, useState } from 'react';
+// react
+import { useState } from 'react';
+// redux
 import { useSelector } from 'react-redux';
-import { getAllPoints, updatePoints } from '../../../redux/pointsRedux';
+import { getAllPoints, changePointsRequest } from '../../../redux/pointsRedux';
 import { getPassword } from '../../../redux/passwordRedux';
 import { useDispatch } from 'react-redux';
 
@@ -31,8 +34,14 @@ const AddPointsWidget = ({ action }) => {
     e.preventDefault();
 
     if (newPoints) {
+
+      const pointsObj = {
+        id: '1',
+        value: `${newPoints}`,
+      }
+
       if (inputPassword === currentPassword) {
-        dispatch(updatePoints(newPoints));
+        dispatch(changePointsRequest(pointsObj));
         setInputPassword('');
         setNewPoints('');
         setErrorPassword(false);

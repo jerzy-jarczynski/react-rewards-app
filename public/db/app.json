@@ -1,12 +1,16 @@
 {
-  "points": {
-    "value": "3000"
-  },
-
-  "password": {
-    "value": "1111"
-  },
-
+  "points": [
+    {
+      "id": "1",
+      "value": "1259"
+    }
+  ],
+  "password": [
+    {
+      "id": "1",
+      "value": "1111"
+    }
+  ],
   "navlinks": [
     {
       "id": "1",
@@ -23,7 +27,6 @@
       "linkTo": "/react-rewards/timeline"
     }
   ],
-
   "rewards": [
     {
       "id": "1",
@@ -226,7 +229,6 @@
       "imgAlt": "Mały prezent"
     }
   ],
-
   "timeline": [
     {
       "id": "1",
@@ -253,5 +255,4 @@
       "rewardId": "25"
     }
   ]
-
 }
