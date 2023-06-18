@@ -1,13 +1,12 @@
 import styles from './TimeLineReward.module.scss';
 import PointsButton from '../../common/PointsButton/PointsButton';
+import RewardImage from '../RewardImage/RewardImage';
 
 const TimeLineReward = props => {
 
   return (
     <div className={ styles.reward }>
-      <div className={ styles.imageWrapper }>
-        <img src={ props.img } alt={ props.imgAlt } className={ styles.image } />
-      </div>
+      <RewardImage source={props.img} altText={ props.imgAlt } />
       <h3 className={ styles.title }>
         { props.title }
       </h3>

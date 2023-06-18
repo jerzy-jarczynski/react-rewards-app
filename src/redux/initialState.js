@@ -1,6 +1,6 @@
 const initialState = {
 
-  points: '3100',
+  points: '',
 
   password: '1111',
 

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 // redux
 import { useDispatch } from 'react-redux';
 import { fetchRewards } from './redux/rewardsRedux';
+import { fetchPoints } from './redux/pointsRedux';
 // router
 import { Routes, Route, useLocation } from 'react-router-dom';
 // components
@@ -26,6 +27,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchRewards());
+    dispatch(fetchPoints());
     if (location !== displayLocation) setTransistionStage("fadeOut");
   }, [location, displayLocation, dispatch]);
 

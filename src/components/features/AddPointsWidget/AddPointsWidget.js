@@ -2,7 +2,7 @@ import AddPointsButton from '../../common/AddPointsButton/AddPointsButton';
 import SubmitButton from '../../common/SubmitButton/SubmitButton';
 import TextInput from '../../common/TextInput/TextInput';
 import styles from './AddPointsWidget.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getAllPoints, updatePoints } from '../../../redux/pointsRedux';
 import { getPassword } from '../../../redux/passwordRedux';
