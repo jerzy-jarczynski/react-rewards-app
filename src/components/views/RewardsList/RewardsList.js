@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import styles from './RewardsList.module.scss';
 import { useSelector } from 'react-redux';
 import { getAllRewards } from '../../../redux/rewardsRedux';
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const Reward = React.lazy(() => import('../../features/Reward/Reward'));
 
