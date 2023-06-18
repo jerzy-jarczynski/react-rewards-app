@@ -1,5 +1,10 @@
-import { legacy_createStore as createStore, combineReducers } from 'redux';
+// redux
+import { legacy_createStore as createStore, combineReducers, compose, applyMiddleware } from 'redux';
+// thunk
+import thunk from 'redux-thunk';
+// initialState
 import initialState from './initialState';
+// combine reducers
 import rewardsReducer from './rewardsRedux';
 import pointsReducer from './pointsRedux';
 import passwordReducer from './passwordRedux';
@@ -19,7 +24,11 @@ const reducer = combineReducers(subreducers);
 const store = createStore(
   reducer,
   initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+  compose (
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+  )
 );
 
 export default store;

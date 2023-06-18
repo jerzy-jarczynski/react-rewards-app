@@ -1,5 +1,8 @@
 // react
 import { useState, useEffect } from 'react';
+// redux
+import { useDispatch } from 'react-redux';
+import { fetchRewards } from './redux/rewardsRedux';
 // router
 import { Routes, Route, useLocation } from 'react-router-dom';
 // components
@@ -14,14 +17,17 @@ import './styles/pageTransitions.scss';
 
 const App = () => {
 
+  const dispatch = useDispatch();
+
   const location = useLocation();
 
   const [displayLocation, setDisplayLocation] = useState(location);
   const [transitionStage, setTransistionStage] = useState("fadeIn");
 
   useEffect(() => {
+    dispatch(fetchRewards());
     if (location !== displayLocation) setTransistionStage("fadeOut");
-  }, [location, displayLocation]);
+  }, [location, displayLocation, dispatch]);
 
   return (
     <>
