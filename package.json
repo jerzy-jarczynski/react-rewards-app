@@ -22,7 +22,7 @@
     "sass": "^1.62.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
+  "scripts": {    
     "start": "npm-run-all -p start:*",
     "start:react": "react-scripts start",
     "start:server": "json-server --port 3131 --no-cors --delay 250 --watch public/db/app.json --routes public/db/routes.json",
