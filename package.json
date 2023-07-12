@@ -1,51 +1,13 @@
 {
   "name": "react-rewards-app",
-  "homepage": "http://dawidmusial.com/react-rewards",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jerzy-jarczynski/react-rewards-app.git",
+  "author": "Jerzy Jarczynski <jerzy.jarczynski.95@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "clsx": "^1.2.1",
-    "framer-motion": "^10.12.16",
-    "json-server": "0.17.0",
-    "npm-run-all": "4.1.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "7.2.5",
-    "react-router-dom": "6.0.1",
-    "react-scripts": "5.0.1",
-    "redux": "4.2.0",
-    "redux-devtools-extension": "2.13.9",
-    "redux-thunk": "^2.4.2",
-    "sass": "^1.62.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {    
-    "start": "npm-run-all -p start:*",
-    "start:react": "react-scripts start",
-    "start:server": "json-server --port 3131 --no-cors --delay 250 --watch public/db/app.json --routes public/db/routes.json",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
   }
 }
